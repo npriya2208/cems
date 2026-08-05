@@ -1,5 +1,8 @@
 # CEMS — College Event Management System
 
+## Live Demo
+🚀 **[Click here to open CEMS Live App](https://cems-bay.vercel.app/)**
+
 A full-stack web application implementing the **College Event Management System (CEMS)**
 designed across four Software Engineering lab experiments:
 
