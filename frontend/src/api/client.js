@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = "https://cems-backend-9m0y.onrender.com/api";
 
 function getToken() {
   return localStorage.getItem("cems_token");
