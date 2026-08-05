@@ -66,7 +66,7 @@ export default function Register() {
           {form.role === "student" && (
             <div className="field">
               <label>Roll No.</label>
-              <input value={form.roll_no} onChange={(e) => update("roll_no", e.target.value)} />
+              <input style={{ width: "100%" }} value={form.roll_no} onChange={(e) => update("roll_no", e.target.value)} />
             </div>
           )}
         </div>
