@@ -1,7 +1,7 @@
 // In local dev, talk to the local backend. Once deployed, talk to the
 // Render backend. Update RENDER_BACKEND_URL after you deploy the backend
 // (Render gives you a URL like https://cems-backend-xxxx.onrender.com).
-const RENDER_BACKEND_URL = "https://cems-backend.onrender.com/api";
+const RENDER_BACKEND_URL = "https://cems-yg18.onrender.com/api";
 
 const BASE =
   window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
