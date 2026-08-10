@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: cems-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    # NOTE: Render's free web service plan does NOT support persistent disks.
+    # cems.db will survive fine between normal requests, but gets wiped on
+    # every redeploy and whenever the free instance spins down from
+    # inactivity and back up. If you need the database to survive redeploys,
+    # upgrade to a paid instance and uncomment the disk block below, or move
+    # to a hosted Postgres (Neon/Supabase have free tiers) instead of SQLite.
+    #
+    # disk:
+    #   name: cems-data
+    #   mountPath: /opt/render/project/src/backend/data
+    #   sizeGB: 1
+    envVars:
+      - key: CEMS_SECRET_KEY
+        sync: false
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: CEMS_SMTP_HOST
+        sync: false
+      - key: CEMS_SMTP_PORT
+        sync: false
+      - key: CEMS_SMTP_USER
+        sync: false
+      - key: CEMS_SMTP_PASSWORD
+        sync: false
+      - key: CEMS_ALLOW_CONSOLE_OTP
+        value: "0"
+      - key: CEMS_ALLOWED_ORIGINS
+        sync: false
