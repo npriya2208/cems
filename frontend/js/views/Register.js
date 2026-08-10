@@ -73,9 +73,6 @@ export default {
           <div class="field">
             <label for="reg-email">Email</label>
             <input id="reg-email" type="email" autocomplete="email" required placeholder="you@gmail.com or you@student.mes.ac.in" />
-            <small style="color:#888">
-              Allowed domains: ${ALLOWED_EMAIL_DOMAINS.join(', ')}.
-            </small>
           </div>
 
           <div class="field">
@@ -103,7 +100,6 @@ export default {
             <div class="field" id="roll-no-field">
               <label for="reg-roll-no">Admission Number</label>
               <input id="reg-roll-no" type="text" placeholder="e.g. CE20230001" />
-              <small style="color:#888">Format: CE/EXTC/IT/MECH/ECS/AUTO + year + serial, e.g. CE20230001–CE20241000.</small>
             </div>
           </div>
 
