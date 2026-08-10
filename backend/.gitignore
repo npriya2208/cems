@@ -1,6 +1,0 @@
-node_modules/
-cems.db
-cems.db-journal
-cems.db-wal
-cems.db-shm
-.env
